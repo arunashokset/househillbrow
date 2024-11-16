@@ -266,7 +266,7 @@ a:hover {
     border: 0;
     content: '';
     color: transparent;
-    background: url(../images/search-icon.png);
+    background: url(../img/search-icon.png);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -383,7 +383,7 @@ a:hover {
 }
 
 .bg-container-1 {
-    background-image: url('../images/banner5.jpg');
+    background-image: url('../img/banner5.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -423,7 +423,7 @@ a:hover {
 }
 
 #contact-top {
-    background-image: url('../images/banner7.jpg');
+    background-image: url('../img/banner7.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -606,7 +606,7 @@ a:hover {
 /*-- Heading --*/
 
 #heading {
-    background-image: url(../images/bg-image.jpg);
+    background-image: url(../img/bg-image.jpg);
     height: 140px;
 }
 
@@ -1579,7 +1579,7 @@ footer .subscribe-form img{
     top: 0;
     width: 34px;
     height: 34px;
-    background: url(../images/subscribe-icon.png);
+    background: url(../img/subscribe-icon.png);
     background-repeat: no-repeat;
     background-position: center;
     color: transparent;
