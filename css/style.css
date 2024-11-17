@@ -534,37 +534,7 @@ a:hover {
 
 /* ======== Footer Top Section End ========= */
 
-@media (max-width:768px) {
-    .heading-container {
-        display: block;
-    }
 
-    .data-container-2 {
-        padding-top: 5%;
-        max-width: 90%;
-    }
-
-    .bg-container-1 {
-        min-height: 60vh;
-    }
-
-    .splited-text-center {
-        max-width: 90%;
-        text-align: left;
-    }
-
-    .primary-heading-left {
-        font-size: 3.5rem;
-    }
-
-    #contact {
-        margin-top: 0em;
-    }
-    .title-top{
-        display: block;
-        text-align: left;
-    }
-}
 
 /* Testimonial text styling */
 .testimonial-text {
@@ -1864,6 +1834,45 @@ footer .subscribe-form img{
         display: none;
     }
 
+}
+
+@media (max-width:768px) {
+    .heading-container {
+        display: block;
+    }
+
+    .data-container-2 {
+        padding-top: 5%;
+        max-width: 90%;
+    }
+
+    .bg-container-1 {
+        min-height: 60vh;
+    }
+
+    .splited-text-center {
+        max-width: 90%;
+        text-align: left;
+    }
+
+    .primary-heading-left {
+        font-size: 3.5rem;
+    }
+
+    #contact {
+        margin-top: 0em;
+    }
+    .title-top{
+        display: block;
+        text-align: left;
+    }
+    .contact-box .title-top{
+        display: block !important;
+    }
+    
+    .contact-box .title-top h4{
+        font-size: 2em;
+    }
 }
 
 @media screen and (max-width: 1000px) {
