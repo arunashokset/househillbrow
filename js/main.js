@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+
+
+
 	
   $("div.blog-post").hover(
     function() {
@@ -11,11 +14,25 @@ $(document).ready(function() {
   );
 
   $('.flexslider').flexslider({
-		prevText: '',
-		nextText: '',
-    controlNav: true,
     animation: "slide",
-	});
+    slideshowSpeed: 5000,
+    prevText: '',
+    nextText: '',
+    controlNav: true,
+    directionNav: true,
+    start: function () {
+        console.log("FlexSlider initialized successfully!");
+    },
+    after: function (slider) {
+        // Hide all captions
+        $('.slider-caption').css({ opacity: 0, visibility: 'hidden' });
+
+        // Show caption for the active slide
+        $(slider.slides[slider.currentSlide])
+            .find('.slider-caption')
+            .css({ opacity: 1, visibility: 'visible' });
+    }
+});
 
   $('.testimonails-slider').flexslider({
     animation: 'slide',
