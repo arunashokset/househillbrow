@@ -1856,9 +1856,14 @@ footer .subscribe-form img{
     }
 
     .primary-heading-left {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
-
+    .secondary-heading {
+        font-size: 1.5rem;
+    }
+    .icon-box-card {
+        padding: 1em;
+    }
     #contact {
         margin-top: 0em;
     }
