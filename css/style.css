@@ -1258,7 +1258,7 @@ textarea {
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
-.slides li.flex-active-slide >.slider-caption {
+.slides li.flex-active-slide>.slider-caption {
     opacity: 1;
     visibility: visible;
     color: #fff;
@@ -1712,6 +1712,25 @@ footer .subscribe-form img {
         margin-bottom: 2em;
     }
 
+    .slider-caption h1 {
+        font-size: 3em;
+        padding-bottom: 4px;
+        font-weight: 700;
+    }
+
+
+    .slider-caption a {
+        width: 150px;
+        font-size: 14px;
+    }
+    .title-phone {
+        font-size: 2em;
+    }
+
+    .primary-heading-left {
+        font-size: 3em;
+    }
+
     .home-account {
         text-align: center;
         display: block;
@@ -1885,6 +1904,10 @@ footer .subscribe-form img {
 
     .navbar-brand img {
         max-height: 35px;
+    }
+
+    .slides li.flex-active-slide>.slider-caption {
+        display: none !important;
     }
 
     .data-container-2 {
