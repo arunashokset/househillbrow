@@ -23,15 +23,15 @@ $(document).ready(function() {
     start: function () {
         console.log("FlexSlider initialized successfully!");
     },
-    after: function (slider) {
-        // Hide all captions
-        $('.slider-caption').css({ opacity: 0, visibility: 'hidden' });
+    // after: function (slider) {
+    //     // Hide all captions
+    //     $('.slider-caption').css({ opacity: 0, visibility: 'hidden' });
 
-        // Show caption for the active slide
-        $(slider.slides[slider.currentSlide])
-            .find('.slider-caption')
-            .css({ opacity: 1, visibility: 'visible' });
-    }
+    //     // Show caption for the active slide
+    //     $(slider.slides[slider.currentSlide])
+    //         .find('.slider-caption')
+    //         .css({ opacity: 1, visibility: 'visible' });
+    // }
 });
 
   $('.testimonails-slider').flexslider({
