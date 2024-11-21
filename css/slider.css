@@ -11,6 +11,10 @@
     --text-color: #666;
 }
 
+.creative-parallax--slider{
+    overflow-x: hidden;
+}
+
 .slider-wrap{
     background:var(--primary-color);
     height: 600px;
@@ -363,47 +367,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: var(--progress, 0%);
     transition: width 0.5s ease; 
 }
-/* ======== Sticky Footer ========= */
-  .sticky-footer{
-       position: fixed;
-    width: 100%;
-        background: #333;
-    z-index: 999;
-    bottom: 0;
-  }
-.sticky-footer .footer-row{
-      display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 10px;
-    padding-right: 15px;
-}
-.creditd a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-        font-size: 16px;
-}
-.social ul{
-      display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0px;
-    column-gap: 10px;
-    align-items: center;
-}
-.social ul li a{
-     display: flex;
-    background: #fff;
-    height: 30px;
-    width: 30px;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-}
-.social ul li a img{
-       max-width: 20px;
-}
+
 /* ==================== Responsive Ipad ========================== */
 @media only screen and (max-width: 981px) {
 .slider-wrap{
