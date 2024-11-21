@@ -127,7 +127,7 @@ p {
 .nav-btns-2 {
     height: 40px;
     margin-top: 0.5em;
-
+    text-decoration: none;
 }
 
 .nav-btns-2:hover {
@@ -398,9 +398,9 @@ a:hover {
 }
 
 .icon-box-card {
-    padding: 2em;
-
+    padding: 0em;
     font-size: 1.5em;
+    margin: 2em 1em;
 }
 
 .icon-box-card .icon-box i {
@@ -454,6 +454,15 @@ a:hover {
     font-size: 3em;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.title-phone a {
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+}
+
+.title-phone a:hover {
+    color: var(--white);
 }
 
 .contact-box-2 .form-control {
@@ -514,6 +523,23 @@ a:hover {
     color: var(--primary-color);
     font-weight: 600;
     align-self: center;
+}
+
+#footer-top .bold-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    align-self: center;
+    font-weight: 600;
+}
+
+.main-footer a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.main-footer a:hover {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 .nav-btns-2 {
@@ -1316,6 +1342,25 @@ textarea {
     text-align: center;
 }
 
+.service-item .icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.service-item .icon-box img {
+    width: 80px;
+    height: auto;
+    transition: 0.5s all ease-in-out;
+}
+
+.service-item:hover>.icon-box img {
+    transform: scale(0.8);
+}
+
 .icon i {
     border-radius: 50%;
     border: 20px solid var(--primary-color);
@@ -1723,6 +1768,7 @@ footer .subscribe-form img {
         width: 150px;
         font-size: 14px;
     }
+
     .title-phone {
         font-size: 2em;
     }
@@ -1933,7 +1979,7 @@ footer .subscribe-form img {
     }
 
     .icon-box-card {
-        padding: 1em;
+        margin: 1em 0.25em;
     }
 
     #contact {
