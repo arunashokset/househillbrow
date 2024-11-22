@@ -476,6 +476,11 @@ a:hover {
     border-radius: 0;
 }
 
+.contact-box-2 .form-text,  .form-text{
+    min-width: 100%;
+    min-height: 150px;
+}
+
 .contact-box-2 .btn-contact {
     height: 60px;
     color: var(--primary-color);
