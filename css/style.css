@@ -171,9 +171,9 @@ a:hover {
 }
 
 .heading-section h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    color: #333;
+    font-family: var(--secondary-font);
+    font-size: 3em;
+    color: var(--primary-color);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -375,7 +375,8 @@ a:hover {
     .splited-text {
         max-width: 100%;
     }
-    .navbar{
+
+    .navbar {
         display: flex;
         --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         content: inherit !important;
@@ -476,7 +477,8 @@ a:hover {
     border-radius: 0;
 }
 
-.contact-box-2 .form-text,  .form-text{
+.contact-box-2 .form-text,
+.form-text {
     min-width: 100%;
     min-height: 150px;
 }
@@ -638,6 +640,16 @@ a:hover {
 .heading-content {
     text-align: center;
     margin-top: 35px;
+}
+
+.heading-content span a{
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s all ease-in-out;
+}
+.heading-content span a:hover{
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 /*-- End Heading --*/
@@ -1746,6 +1758,64 @@ footer .subscribe-form img {
 
 /*-- End Footer --*/
 
+/*-- About Us Section Start --*/
+.about-bg-image-1 {
+    background-image: url('../img/blogpost2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.about-text-box {
+    background: var(--fourth-color);
+    color: var(--white);
+    padding: 20px;
+    max-width: 80%;
+    position: absolute;
+    transform: translate(-20%, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;/
+}
+
+.about-text-box-left {
+    padding: 1em;
+    margin-right: 8rem;
+}
+
+.about-text-box-left h2 {
+    color: var(--primary-color);
+}
+
+.about-text-box h1 {
+    margin-top: 0;
+    font-size: 6rem;
+    font-weight: 800;
+
+}
+
+.about-text-box h2,
+.about-text-box-left h2 {
+    margin-top: 0.25em;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-text-box h2 span {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.about-text-box p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/*-- About Us Section End --*/
+
 
 
 
@@ -2010,10 +2080,22 @@ footer .subscribe-form img {
     .contact-box .title-top h4 {
         font-size: 2em;
     }
-    
+
     footer {
         padding: 0 1em;
     }
+
+    .about-text-box {
+        max-width: 100%;
+        transform: translate(10%, 0);
+    }
+
+    .about-text-box-left {
+        padding: 0.5em;
+        margin-right: 0rem;
+
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
