@@ -562,26 +562,26 @@
 
         <div class="container mt-0 contact-box-2 p-5 mb-5">
             <div class="row">
-                <form action="contact.php" method="post" class="send-message">
+                <form action="./contact.php" method="post" class="send-message">
                 <!-- Contact Form Fields -->
                 <div class="col-md-6 my-3 px-5">
                     <!-- <label for="name" class="form-label text-white">Name</label> -->
-                    <input type="text" class="form-control m-3" id="name" placeholder="Name">
+                    <input type="text" class="form-control m-3" id="name" name="name" placeholder="Name">
                 </div>
                 <div class="col-md-6 my-3 px-5">
                     <!-- <label for="phone" class="form-label text-white">Phone</label> -->
-                    <input type="tel" class="form-control m-3" id="phone" placeholder="Phone number">
+                    <input type="tel" class="form-control m-3" id="phone" name="phone" placeholder="Phone number">
                 </div>
                 <div class="col-md-6 my-3 px-5">
                     <!-- <label for="email" class="form-label text-white">Email</label> -->
-                    <input type="email" class="form-control m-3" id="email" placeholder="Email">
+                    <input type="email" class="form-control m-3" id="email" name="email" placeholder="Email">
                 </div>
                 <div class="col-md-6 my-3 px-5">
                     <!-- <label for="location" class="form-label text-white">Location</label> -->
-                    <input type="text" class="form-control m-3" id="location" placeholder="Location">
+                    <input type="text" class="form-control m-3" id="location" name="location" placeholder="Location">
                 </div>
                 <div class="col-md-12 my-3 px-5">
-                    <textarea name="text" class="form-control form-text m-3 w-100" placeholder="Message"  rows="7"></textarea>
+                    <textarea name="message" name="message" class="form-control form-text m-3 w-100" placeholder="Message"  rows="7"></textarea>
                 </div>
 
                 <!-- Submit Button -->
