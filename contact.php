@@ -1,85 +1,55 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-if (isset($_POST['email'])) {
-
-    // EDIT THE 2 LINES BELOW AS REQUIRED
+    // Receiver's email address
     $email_to = "househillbrow@gmail.com";
     $email_subject = "HILLBROW - New Enquiry";
 
-    function died($error) {
-        // Error message display
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below:<br /><br />";
-        echo $error . "<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        die();
-    }
-
-    // Validation: Expected data exists
+    // Validation: Check required fields
     if (
-        !isset($_POST['name']) ||
-        !isset($_POST['email']) ||
-        !isset($_POST['phone']) ||
-        !isset($_POST['location']) ||
-        !isset($_POST['message'])
+        empty($_POST['name']) ||
+        empty($_POST['email']) ||
+        empty($_POST['phone']) ||
+        empty($_POST['location']) ||
+        empty($_POST['message'])
     ) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');
+        die('Error: All fields are required.');
     }
 
-    $name = $_POST['name']; // Required
-    $email_from = $_POST['email']; // Required
-    $phone = $_POST['phone']; // Required
-    $location = $_POST['location']; // Required
-    $message = $_POST['message']; // Required
+    // Assign POST values
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $email_from = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $phone = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
+    $location = filter_var($_POST['location'], FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
-    $error_message = "";
-
-    // Validate email format
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-    if (!preg_match($email_exp, $email_from)) {
-        $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+    // Validate email
+    if (!filter_var($email_from, FILTER_VALIDATE_EMAIL)) {
+        die('Error: Invalid email address.');
     }
 
-    // Validate name
-    $string_exp = "/^[A-Za-z .'-]+$/";
-    if (!preg_match($string_exp, $name)) {
-        $error_message .= 'The Name you entered does not appear to be valid.<br />';
-    }
-
-    // Validate message length
-    if (strlen($message) < 2) {
-        $error_message .= 'The Message you entered does not appear to be valid.<br />';
-    }
-
-    // Stop execution if errors exist
-    if (strlen($error_message) > 0) {
-        died($error_message);
-    }
-
-    // Clean input strings
-    function clean_string($string) {
-        $bad = array("content-type", "bcc:", "to:", "cc:", "href");
-        return str_replace($bad, "", $string);
-    }
-
-    // Prepare email content
-    $email_message = "Form details below.\n\n";
-    $email_message .= "Name: " . clean_string($name) . "\n";
-    $email_message .= "Email: " . clean_string($email_from) . "\n";
-    $email_message .= "Phone: " . clean_string($phone) . "\n";
-    $email_message .= "Location: " . clean_string($location) . "\n";
-    $email_message .= "Message: " . clean_string($message) . "\n";
+    // Prepare the email content
+    $email_message = "New enquiry details:\n\n";
+    $email_message .= "Name: " . $name . "\n";
+    $email_message .= "Email: " . $email_from . "\n";
+    $email_message .= "Phone: " . $phone . "\n";
+    $email_message .= "Location: " . $location . "\n";
+    $email_message .= "Message: " . $message . "\n";
 
     // Email headers
-    $headers = 'From: ' . $email_from . "\r\n" .
-               'Reply-To: ' . $email_from . "\r\n" .
-               'X-Mailer: PHP/' . phpversion();
+    $headers = "From: " . $email_from . "\r\n" .
+               "Reply-To: " . $email_from . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
-    // Send email
+    // Send the email
     if (@mail($email_to, $email_subject, $email_message, $headers)) {
+        // Redirect to a thank-you page upon success
         header('Location: thank-you.html');
+        exit;
     } else {
         echo "<p style='color: red;'>Oops, something went wrong. Please try again later.</p>";
     }
+} else {
+    die('Error: Invalid request method.');
 }
 ?>
