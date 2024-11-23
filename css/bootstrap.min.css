@@ -4442,7 +4442,12 @@ fieldset:disabled .btn {
 .tab-content>.active {
     display: block
 }
-
+.navbar-container{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 15px; 
+}
 .navbar {
     --bs-navbar-padding-x: 0;
     --bs-navbar-padding-y: 0.5rem;
@@ -4545,10 +4550,11 @@ fieldset:disabled .btn {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
     line-height: 1;
-    color: var(--bs-navbar-color);
+    color: var(--white);
     background-color: transparent;
-    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-    border-radius: var(--bs-navbar-toggler-border-radius);
+    border: none !important;
+    /* border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color); */
+    /* border-radius: var(--bs-navbar-toggler-border-radius); */
     transition: var(--bs-navbar-toggler-transition)
 }
 
@@ -4565,7 +4571,7 @@ fieldset:disabled .btn {
 .navbar-toggler:focus {
     text-decoration: none;
     outline: 0;
-    box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width)
+    /* box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) */
 }
 
 .navbar-toggler-icon {
@@ -4573,10 +4579,51 @@ fieldset:disabled .btn {
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle;
-    background-image: var(--bs-navbar-toggler-icon-bg);
+    /* background-image: var(--bs-navbar-toggler-icon-bg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%
+}
+
+.navbar-toggler span {
+    display: block;
+    background-color: var(--white);
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+/* Default state: parallel lines */
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg);
+}
+
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/* State when navbar-toggler is not collapsed */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg);
 }
 
 .navbar-nav-scroll {

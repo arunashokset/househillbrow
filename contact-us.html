@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/style-misc.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/testimonails-slider.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
@@ -23,10 +20,12 @@
     <header>
         <div id="main-header">
             <nav class="navbar navbar-expand-lg bg-blue">
-                <div class="container">
+                <div class="container-fluid">
                     <a class="navbar-brand" href="#"><img src="img/logo-white.png" alt="Care Home Logo" height="50"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -107,26 +106,32 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="message-form">
-                                        <form action="contact.php" method="post" class="send-message">
+                                        <form action="./test.php" method="post" class="send-message">
                                             <div class="row">
                                                 <div class="col-md-6 my-3 px-5">
-                                                    <input type="text" class="form-control m-3" name="name" id="name" placeholder="Name" />
+                                                    <input type="text" class="form-control m-3" name="name" id="name"
+                                                        placeholder="Name" />
                                                 </div>
                                                 <div class="col-md-6 my-3 px-5">
                                                     <!-- <label for="phone" class="form-label text-white">Phone</label> -->
-                                                    <input type="tel" class="form-control m-3" name="phone"  id="phone" placeholder="Phone number">
+                                                    <input type="tel" class="form-control m-3" name="phone" id="phone"
+                                                        placeholder="Phone number">
                                                 </div>
                                                 <div class="col-md-6 my-3 px-5">
-                                                    <input type="text" class="form-control m-3"name="email" id="email" placeholder="Email" />
+                                                    <input type="text" class="form-control m-3" name="email" id="email"
+                                                        placeholder="Email" />
                                                 </div>
                                                 <div class="col-md-6 my-3 px-5">
                                                     <!-- <label for="location" class="form-label text-white">Location</label> -->
-                                                    <input type="text" class="form-control m-3" name="location"  id="location" placeholder="Location">
+                                                    <input type="text" class="form-control m-3" name="location"
+                                                        id="location" placeholder="Location">
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12 my-3 px-5">
-                                                    <textarea name="text" class="form-control m-3 w-100 form-text" placeholder="Message" rows="7"></textarea>
+                                                    <textarea name="message" id="message"
+                                                        class="form-control m-3 w-100 form-text" placeholder="Message"
+                                                        rows="7"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 my-3 px-5 send">
@@ -138,13 +143,16 @@
                                 <div class="col-md-4">
                                     <div class="contact-img">
                                         <img src="./img/contact-img.png">
-                                        </div>
+                                    </div>
                                     <div class="info mt-3">
-                                       
+
                                         <ul>
-                                            <li><i class="fa fa-map-marker"></i>Hilbrow House, 1 Park Raod, Crediton, EX17 3BS</li>
-                                            <li><i class="fa fa-phone"></i><a href="tel:01363 773055" target="_blank">01363 773055</a></li>                                   
-                                            <li><i class="fa fa-envelope"></i><a href="mailto:househillbrow@gmail.com" target="_blank">househillbrow@gmail.com</a></li>
+                                            <li><i class="fa fa-map-marker"></i>Hilbrow House, 1 Park Raod, Crediton,
+                                                EX17 3BS</li>
+                                            <li><i class="fa fa-phone"></i><a href="tel:01363 773055"
+                                                    target="_blank">01363 773055</a></li>
+                                            <li><i class="fa fa-envelope"></i><a href="mailto:househillbrow@gmail.com"
+                                                    target="_blank">househillbrow@gmail.com</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -162,7 +170,10 @@
             </div>
             <div class="row mb-5">
                 <div class="col-md-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.351446972839!2d-3.651871123757901!3d50.78759506303198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486dafd5dd5fcddd%3A0xc7c3ec1958c16810!2sHillbrow%20Residential%20Care%20Home%20Ltd!5e0!3m2!1sen!2sin!4v1732339065856!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.351446972839!2d-3.651871123757901!3d50.78759506303198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486dafd5dd5fcddd%3A0xc7c3ec1958c16810!2sHillbrow%20Residential%20Care%20Home%20Ltd!5e0!3m2!1sen!2sin!4v1732339065856!5m2!1sen!2sin"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -198,8 +209,10 @@
                     <div class="col-md-4">
                         <div class="about">
                             <h4 class="footer-title">About Us</h4>
-                            <p>The Hillbrow Residential Care Home has an enviable reputation for providing attentive, considerate, safe and re-
-                                spectful care within a very comfortable and well-furnished environment. Hillbrow was first registered as a Care Home
+                            <p>The Hillbrow Residential Care Home has an enviable reputation for providing attentive,
+                                considerate, safe and re-
+                                spectful care within a very comfortable and well-furnished environment. Hillbrow was
+                                first registered as a Care Home
                                 with the Devon County Council in 1981 and
                                 is one of the longest established Care Homes
                                 in Crediton.
@@ -218,7 +231,7 @@
                             </ul>
                         </div>
                     </div>
-                  
+
                     <div class="col-md-4">
                         <div class="more-info">
                             <h4 class="footer-title">Locate Us</h4>
@@ -249,7 +262,20 @@
     <script src="js/vendor/jquery.gmap3.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/slider.js"></script>
-    <script src="js/main.js"></script>    
+    <script src="js/main.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("househillbrow@gmail.com");
+        document.getElementById("contact-form").onsubmit = function (event) {
+            event.preventDefault();
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function () {
+                    alert('Message sent successfully!');
+                }, function (error) {
+                    alert('Failed to send message: ' + JSON.stringify(error));
+                });
+        };
+    </script>
 
 
 </body>
