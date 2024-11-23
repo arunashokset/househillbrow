@@ -67,6 +67,9 @@ p {
 .navbar-nav>li {
     margin: auto 1em;
 }
+.navbar-nav> .nav-link:hover {
+    color: var(--tertiary-color) !important;
+}
 
 .nav-btns {
     font-family: var(--secondary-font);
@@ -126,15 +129,20 @@ p {
 }
 
 .nav-btns-2 {
-    height: 40px;
+    min-height: 40px;
+    height: auto;
     margin-top: 0.5em;
     text-decoration: none;
+    text-align: center;
 }
 
 .nav-btns-2:hover {
     color: var(--white);
     background-color: transparent;
-    border: 1px solid var(--white);
+}
+
+.nav-right-btns{
+    display: flex;
 }
 
 .bg-none {
@@ -432,6 +440,9 @@ a:hover {
 #contact {
     transform: translate(0%, -20%);
 }
+.contact-img img{
+    width: 100%;
+}
 
 #contact-top {
     background-image: url('../img/banner7.jpg');
@@ -495,6 +506,17 @@ a:hover {
     box-shadow: none;
 }
 
+#contact-us{
+    background-color: var(--tertiary-color);
+    padding: 3em 0;
+}
+#contact-us a{
+    color: var(--white);
+    text-decoration: none;
+}
+#contact-us ul li, #contact-us ul li i{
+    color: var(--white);
+}
 /* ======== Contact Us Section End ========= */
 
 /* ======== Footer Top Section Start ========= */
@@ -569,7 +591,7 @@ a:hover {
     color: var(--white);
     border-radius: 50px;
     font-weight: 600;
-    padding-bottom: 2.5em;
+    /* padding-bottom: 2.5em; */
 }
 
 .nav-btns-2.btn-primary:hover {
@@ -2139,10 +2161,29 @@ footer .subscribe-form img {
     .heading-container {
         display: block;
     }
+    .navbar-nav {
+        padding: 0;
+    }
 
     .navbar-brand img {
         max-height: 35px;
     }
+    .nav-right-btns{
+        display: block;
+        margin-bottom: 3em;
+    }
+
+    .nav-btns {
+        padding: 0.05em 0em;
+    }
+    .nav-btns-1{
+        margin-bottom: 1em;
+    }
+
+    .nav-btns-2.btn-primary {
+        margin: 1em 0;
+        padding: 0.5em 2em;
+      }
 
     .slides li.flex-active-slide>.slider-caption {
         display: none !important;
