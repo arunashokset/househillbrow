@@ -660,6 +660,7 @@ a:hover {
 }
 
 .heading-content {
+    font-family: var(--secondary-font);
     text-align: center;
     margin-top: 35px;
 }
