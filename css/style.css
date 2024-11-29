@@ -465,7 +465,7 @@ a:hover {
 }
 
 .bg-container-1 {
-    background-image: url('../img/banner5.jpg');
+    background-image: url('../img/banner5.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -508,7 +508,7 @@ a:hover {
 }
 
 #contact-top {
-    background-image: url('../img/banner7.jpg');
+    background-image: url('../img/banner7.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1574,7 +1574,7 @@ textarea {
 
 #services-about {
     position: relative;
-    background-image: url('../img/banner7.jpg');
+    background-image: url('../img/banner7.webp');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -2005,7 +2005,7 @@ footer .subscribe-form img {
 }
 
 .about-bg-image-2 {
-    background-image: url('../img/banner6.jpg');
+    background-image: url('../img/banner6.webp');
     background-size: cover;
     background-position: center;
     height: 100%;
