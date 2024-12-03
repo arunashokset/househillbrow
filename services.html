@@ -31,7 +31,7 @@
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="services.html">Our Care</a></li>
                             <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
                             <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown"
@@ -68,7 +68,7 @@
 
 
                             </button>
-                            <button class="nav-btns nav-btns-2 btn-primary">Schedule a tour</button>
+                            <button class="nav-btns nav-btns-2 btn-primary">Get in Touch</button>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="heading-content">
-                        <h2>Our Services</h2>
-                        <span> <a href="index.html">Home</a> / Services</span>
+                        <h2>Our Care</h2>
+                        <span> <a href="index.html">Home</a> / Our Care</span>
                     </div>
                 </div>
             </div>
@@ -195,6 +195,17 @@
         </div>
     </div>
 
+    <div class="wrapper d-flex justify-content-center">
+        <div class="content">
+            <header>Cookies Consent</header>
+            <p>This website uses cookies to give our users the best experience. You can manage your settings below or find out by reading our Cookie Policy./p>
+            <div class="buttons">
+                <button class="item">Accept</button>
+                <a href="#" class="item">Reject</a>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <div class="top-footer">
@@ -278,7 +289,25 @@
     <script src="js/vendor/jquery.gmap3.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        const cookieBox = document.querySelector(".wrapper"),
+            acceptBtn = cookieBox.querySelector("button");
+        acceptBtn.onclick = () => {
+            document.cookie = "CookieBy=FaridVatani; max-age=" + 60 * 60 * 24 * 30;
+            if (document.cookie) {
+                cookieBox.classList.add("hide");
+            } else {
+                alert(
+                    "Cookie can't be set! Please unblock this site from the cookie setting of your browser."
+                );
+            }
+        };
+        let checkCookie = document.cookie.indexOf("CookieBy=FaridVatani");
+        checkCookie != -1
+            ? cookieBox.classList.add("hide")
+            : cookieBox.classList.remove("hide");
 
+    </script>
 
 
 </body>
